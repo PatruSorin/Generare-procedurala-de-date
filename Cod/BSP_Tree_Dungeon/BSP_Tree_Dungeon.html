@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="style.css">
+    <title>BSP Tree Dungeon</title>
+  </head>
+  <body>
+      <h1>BSP Dungeon</h1>
+      <div class="stuff_container">
+          <div id="controls">
+              <ul>
+                  <li>
+                      <label>Dimensiunea hartii</label>
+                      <input name="mapsize" type="number" min="0">
+                  </li>
+                  <li>
+                      <label>Iteratii</label>
+                      <input name="iterations" type="number" min="0">
+                  </li>
+                  <li>
+                  <label>Elimina conteinere care nu indeplinesc restictiile minime de dimensiune
+                      <a id="discard_label_footnote" href="#">*</a>
+                  </label>
+                      <input name="discard_ratio" type="checkbox">
+                  </li>
+                  <li>
+                      <label>ratia verticala a camerei &gt;</label>
+                      <input name="h_ratio" type="number" min="0" step="0.01">
+                  </li>
+                  <li>
+                      <label>ratia orizontala a camerei &gt;</label>
+                      <input name="w_ratio" type="number" min="0" step="0.01">
+                  </li>
+                  <li>
+                      <label>Deseneaza gridul</label>
+                      <input name="d_grid" type="checkbox">
+                  </li>
+                  <li>
+                      <label>Deseneaza BSP-ul</label>
+                      <input name="d_bsp" type="checkbox">
+                  </li>
+                  <li>
+                      <label>Deseneaza camerele</label>
+                      <input name="d_rooms" type="checkbox">
+                  </li>
+                  <li>
+                      <label>Deseneaza coridoarele</label>
+                      <input name="d_paths" type="checkbox">
+                  </li>
+              </ul>
+          </div>
+          <div class="canvas_wrapper">
+              <canvas width="400" height="400" id="viewport">
+
+
+              </canvas>
+          </div>
+          <div id="debug"><h1>Debug panel</h1><ul><li class="active">Harta generata in 3 ms</li></ul></div>
+      </div>
+      <form id="seeder" >
+          <input id="seed" name="seed" hidden=true>
+          <button id="load" hidden=true>Load</button>
+          <button id="generate">Generaza o harta noua</button>
+      </form>
+
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+  <script src="lib/seedrandom.js"></script>
+  <script src="lib/md5.js"></script>
+
+  <script src="dungeon.js"></script>
+  <script src="main.js"></script>
+
+
+  </body>
+</html>

@@ -1,0 +1,136 @@
+body { }
+
+div.stuff_container {
+    width: 100%;
+}
+
+div.stuff_container:after {
+    content: "";
+    display: table;
+    clear: both;
+}
+
+div.stuff_container *,
+div.stuff_container *:after,
+div.stuff_container *:before {
+    box-sizing: border-box;
+}
+
+div.canvas_wrapper {
+    width: 40%;
+    float: left;
+}
+
+canvas {
+    width: 400px;
+    height: 400px;
+}
+
+div#controls {
+    vertical-align: top;
+    float: left;
+    padding: 20px;
+    width: 30%;
+}
+
+div#controls ul{
+    list-style-type: none;
+    padding: 0px;
+    margin: 0px;
+    width: 100%;
+}
+
+div#controls ul li {
+    padding: 0px;
+    margin: 0px;
+    display: block;
+    height: 40px;
+    clear: both;
+    border-bottom: solid 1px #000;
+}
+
+div#controls ul li label {
+    float: left;
+    line-height: 40px;
+}
+
+div#controls input {
+    width: 80px;
+    border: solid 0px transparent;
+    text-align: center;
+    padding: 6px;
+    font-size: 18px;
+    float: right;
+    vertical-align: top;
+}
+
+div#controls input[type="checkbox"] {
+    margin-top: 12px;
+    width: auto;
+}
+
+div#debug {
+    float: left;
+    vertical-align: top;
+    width: 30%;
+}
+
+div#debug h1 {
+    font-size: 20px;
+    text-align: center;
+}
+
+div#debug ul {
+    list-style-type: none;
+    height: 350px;
+    overflow: auto;
+    margin: 0px;
+    padding: 5px;
+}
+
+div#debug ul li {
+    font-size: 10px;
+    padding: 0px;
+    margin: 0px;
+    margin-top: 5px;
+    margin-bottom: 5px;
+}
+
+div#debug ul li.active {
+    font-weight: bold;
+    font-size: 14px;
+    background-color: #252525;
+    color: #FFF;
+    padding: 5px;
+    border-radius: 4px;
+}
+
+h1 {
+    text-align: center;
+}
+
+form#seeder {
+    width: 400px;
+    margin: 20px auto;
+}
+
+form#seeder input#seed {
+    width: 290px;
+    padding: 10px;
+    border: solid 0px transparent;
+    border-bottom: solid 1px #252525;
+    float: left;
+    text-align: center;
+}
+
+form#seeder button#load {
+    padding: 10px;
+    width: 90px;
+    float: right;
+}
+
+form#seeder button#generate {
+    width: 400px;
+    padding: 10px;
+    margin-top: 10px;
+}
